@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects</title>
+  <link rel="icon" href="img/icon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Project Cards */
+    .project-card {
+      overflow: hidden;
+      position: relative;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      opacity: 0; /* Start hidden */
+      transform: scale(0.8); /* Start with scale */
+      animation: rippleIn 1s ease-in-out forwards; /* Zoom-in animation */
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .project-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover::after {
+      opacity: 1;
+    }
+
+    .project-card .content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 10;
+      color: white;
+    }
+
+    .project-card h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-card p {
+      font-size: 0.875rem;
+    }
+
+    /* Ripple-In Animation */
+    @keyframes rippleIn {
+      0% {
+        transform: scale(0.6);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .project-card {
+      animation: rippleIn 1s ease-in-out forwards;
+      opacity: 0;
+      transform: scale(0.6);
+    }
+
+    /* Staggered Animation Delay */
+    .project-card:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .project-card:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .project-card:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    .project-card:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+    .project-card:nth-child(5) {
+      animation-delay: 1s;
+    }
+    .project-card:nth-child(6) {
+      animation-delay: 1.2s;
+    }
+    
+  /* Modal Styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal.show {
+    display: flex;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+
+  .modal.hide {
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+
+  .modal-image {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Start hidden */
+    transform: scale(0.8); /* Start with scale */
+    animation: popUp 0.6s ease-out forwards; /* Pop-up animation */
+  }
+
+  .modal-image.closing {
+    animation: popOut 0.6s ease-out forwards; /* Pop-out animation */
+  }
+
+  /* Modal Close Button */
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+  }
+
+  .modal-close:hover {
+    transform: scale(1.2) rotate(90deg);
+    background: rgba(255, 0, 0, 0.9);
+    box-shadow: 0px 8px 20px rgba(255, 0, 0, 0.6);
+  }
+
+  .modal-close span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .modal-close span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .modal-close span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .modal-close:hover span {
+    background: white;
+  }
+
+
+  @keyframes popInCloseButton {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Close Button Animation on Modal Close */
+  .modal-close.closing {
+    animation: popOutCloseButton 0.6s ease-out forwards;
+  }
+
+  @keyframes popOutCloseButton {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+
+  /* Fade-in Animation for Modal Background */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* Fade-out Animation for Modal Background */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* Pop-Up Animation for Image */
+  @keyframes popUp {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Pop-Out Animation for Image */
+  @keyframes popOut {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+  }
+
+    /* Hover bounce animation for icons */
+    .hover-bounce:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
+</style>
+
+<style>
+  /* Common Button Styles */
+  .filter-btn {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, #3b82f6, #2563eb, #1d4ed8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px; /* Fully rounded buttons */
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .filter-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Underline Animation */
+  .filter-btn span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #facc15, #fb923c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .filter-btn:hover span {
+    transform: scaleX(1);
+  }
+
+  /* Responsive Button Group */
+  .button-group {
+    display: flex;
+    flex-wrap: wrap; /* Ensure buttons wrap for small screens */
+    justify-content: center;
+    gap: 16px; /* Space between buttons */
+  }
+
+  @media (min-width: 768px) {
+    .button-group {
+      gap: 24px; /* Increase gap for larger screens */
+    }
+  }
+</style>
+  
+</head>
+
+
+<body class="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 text-gray-800">
+
+<div id="pageTransition" class="page-transition" aria-hidden="true"></div>
+
+
+  <!-- Hovering WhatsApp & Mail & Phone -->
+  <div style="position: fixed; bottom: 323px; right: 30px; z-index: 1000;">
+    <a href="https://wa.me/+918500556461?text=Hello!" target="_blank" style="text-decoration: none;">
+      <img 
+        src="img/wpicon.webp" 
+        alt="WhatsApp Icon" 
+        style="width: 75px; height: 75px; transition: transform 0.3s ease; z-index: 1000;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"/>
+    </a>
+  </div>  
+
+  <div style="position: fixed; bottom: 245px; right: 22px; z-index: 1000;">
+    <a href="tel:+12523709157" style="text-decoration: none;">
+      <img 
+        src="img/phoneicon.png" 
+        alt="Phone Icon" 
+        style="width: 90px; height: 85px; transition: transform 0.3s ease; cursor: pointer; z-index: 1000;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"
+      />
+    </a>
+  </div>  
+
+  <div style="position: fixed; bottom: 175px; right: 30px; z-index: 1000;">
+    <a href="mailto:svsteeldetailing@gmail.com" target="_blank" style="text-decoration: none;">
+      <img 
+        src="img/mailicon.png" 
+        alt="Mail Icon" 
+        style="width: 75px; height: 75px; transition: transform 0.3s ease; z-index: 1000;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"/>
+    </a>
+  </div>
+
+<!-- Navbar -->
+<nav 
+  class="navbar fixed w-full z-20 top-0 left-0 shadow-lg backdrop-filter backdrop-blur-md transition duration-300" 
+  style="background: linear-gradient(90deg, #3b3c3d, #335b83, #3b3c3d); /* Gradient Blue */">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img 
+        src="img/logo.png" 
+        alt="SV Steel Detailing Logo" 
+        style="height: 70px; max-height: 100%; object-fit: contain; margin-right: 12px; transition: transform 0.3s;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"
+      >
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="hidden md:flex space-x-8">
+      <a href="index.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Home
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="about.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        About
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="services.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Services
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="Portfolio.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Portfolio
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="project.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Projects
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="contact.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Contact
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="menu-toggle" class="text-white md:hidden focus:outline-none hover:text-blue-300 transition-transform hover:scale-110">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Links -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 py-4 space-y-4" style="background-color: #3b3c3d, #335b83, #3b3c3d; /* Deep Blue */">
+    <a href="index.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Home</a>
+    <a href="about.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">About</a>
+    <a href="services.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Services</a>
+    <a href="Portfolio.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Portfolio</a>
+    <a href="project.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Projects</a>
+    <a href="contact.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Contact</a>
+  </div>
+</nav>
+      
+      <script>
+        // Toggle Mobile Menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+      
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          mobileMenu.classList.toggle('block');
+        });
+      </script>
+
+  <!-- Projects Section -->
+  <section id="project" class="py-16 mt-16 bg-[#335B83]">
+    <div class="container mx-auto px-6">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-100">Our Projects</h2>
+        <p class="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
+        Explore our portfolio of innovative steel detailing projects, showcasing precision, creativity, and excellence in modern construction solutions.
+        </p>
+      </div>
+  
+      <!-- Filter Buttons -->
+      <div class="text-center mb-8">
+        <div class="button-group">
+          <button
+            class="filter-btn text-white font-semibold py-3 px-8 rounded-lg border-2 border-gray-500 bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            data-filter="all"
+          >
+            All
+            <span></span>
+          </button>
+          <button
+            class="filter-btn text-white font-semibold py-3 px-8 rounded-lg border-2 border-gray-500 bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            data-filter="structural"
+          >
+            Structural
+            <span></span>
+          </button>
+          <button
+            class="filter-btn text-white font-semibold py-3 px-8 rounded-lg border-2 border-gray-500 bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            data-filter="miscellaneous"
+          >
+            Miscellaneous
+            <span></span>
+          </button>
+          <button
+            class="filter-btn text-white font-semibold py-3 px-8 rounded-lg border-2 border-gray-500 bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            data-filter="connection"
+          >
+            Connection
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+
+      <!-- Project Cards -->
+      <div id="project-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 (Structural) -->
+        <div class="project-card structural">
+          <!-- <img src="img/Bridge-thegem-portfolio-metro.png" alt="Bridge Project"> -->
+          <img src="img/bridge.webp" alt="Bridge Project">
+          <div class="content">
+            <h3>Bridge Design</h3>
+            <p>High-precision steel detailing for modern bridges.</p>
+          </div>
+        </div>
+        <!-- Project Card 4 (Miscellaneous) -->
+        <div class="project-card miscellaneous">
+          <!-- <img src="img/Decorative-Handrail-111-thegem-portfolio-metro.png" alt="Decorative Handrails"> -->
+          <img src="img/misc2.gif" alt="Miscellaneous Project">
+          <div class="content">
+            <h3>Industrial Building</h3>
+            <p>Specialized steel handrails for architectural designs.</p>
+          </div>
+        </div>
+        <!-- Project Card 7 (Miscellaneous) -->
+        <div class="project-card miscellaneous">
+          <!-- <img src="img/Industrial-Building-1115-thegem-portfolio-metro.png" alt="Industrial Building"> -->
+          <img src="img/misc1.webp" alt="Miscellaneous Project">
+          <div class="content">
+            <h3>Industrial Platforms</h3>
+            <p>Steel detailing for industrial and manufacturing plants.</p>
+          </div>
+        </div>
+        <!-- Project Card 2 (Structural) -->
+        <div class="project-card structural">
+          <!-- <img src="img/Commercial-Building-thegem-portfolio-metro.png" alt="Commercial Building"> -->
+          <img src="img/church.webp" alt="church Project">
+          <div class="content">
+            <h3>Commercial Building</h3>
+            <p>Structural steel detailing for commercial high-rises.</p>
+          </div>
+        </div>
+        <!-- Project Card 5 (Structural) -->
+        <div class="project-card structural">
+          <img src="img/sawmill.jpg" alt="Sawmill Project">
+          <div class="content">
+            <h3>Warehouse Structures</h3>
+            <p>Efficient and cost-effective warehouse steel designs.</p>
+          </div>
+        </div>
+        <!-- Project Card 6 (Miscellaneous) -->
+        <div class="project-card miscellaneous">
+          <img src="img/stairs.webp" alt="Stairs & Handrails Project">
+          <div class="content">
+            <h3>Stairs & Handrails</h3>
+            <p>Customized Stairs & Handrails designs.</p>
+          </div>
+        </div>
+        <!-- Project Card 9 (Connection) -->
+        <div class="project-card connection">
+          <img src="img/bracingcrop.jpg" alt="Bracingcrop Project">
+          <div class="content">
+            <h3>Connection Design</h3>
+            <p>Connection Design for both Structural and Miscellaneous Steel</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+<!-- Modal -->
+<div class="modal" id="imageModal">
+    <button class="modal-close" onclick="closeModal()">
+      <span></span>
+      <span></span>
+    </button>
+    <img id="modalImage" src="" alt="Project Image" class="modal-image">
+  </div>
+  
+
+  <script>
+    // Open Modal
+    function openModal(imageSrc) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageSrc;
+      modal.classList.add('show');
+    }
+  
+    // Close Modal
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('show');
+    }
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const projectCards = document.querySelectorAll(".project-card");
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+
+        projectCards.forEach((card) => {
+          if (filter === "all" || card.classList.contains(filter)) {
+            card.style.display = "block"; // Show matching projects
+          } else {
+            card.style.display = "none"; // Hide non-matching projects
+          }
+        });
+      });
+    });
+  });
+</script>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="container mx-auto px-6">
+      <!-- Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left animate-fade-in">
+        <!-- Company Info -->
+        <div class="text-center">
+          <img 
+          src="img/logo.png" 
+          alt="SV Steel Detailing Logo" 
+          style="height: 100px; max-height: 100%; object-fit: contain; margin: 0 auto 12px; transition: transform 0.3s;" 
+          onmouseover="this.style.transform='scale(1.1)'" 
+          onmouseout="this.style.transform='scale(1)'"
+        >
+          <!-- <h5 class="text-xl font-bold text-yellow-500 mb-3">SVS Detailing Services</h5> -->
+          <p class="leading-relaxed">
+            Professional steel detailing services delivering accurate, efficient, and BIM-compliant solutions for modern construction projects.
+          </p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div>
+          <h5 class="text-xl font-bold text-yellow-500 mb-3">Quick Links</h5>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-yellow-400 transition-colors">About</a></li>
+            <li><a href="services.html" class="hover:text-yellow-400 transition-colors">Services</a></li>
+            <li><a href="Portfolio.html" class="hover:text-yellow-400 transition-colors">Portfolio</a></li>            
+            <li><a href="project.html" class="hover:text-yellow-400 transition-colors">Projects</a></li>
+            <li><a href="contact.html" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+  
+      <!-- Connect With Us -->
+      <div>
+        <h5 class="text-xl font-bold text-yellow-500 mb-3">Connect With Us</h5>
+        <div class="space-y-4">
+          <div class="flex items-center justify-center md:justify-start hover-bounce">
+            <i class="bi bi-telephone-fill text-amber-400 text-2xl mr-4"></i>
+            <a href="tel:+12523709157" target="_blank" class="hover:text-orange-400 transition-colors">
+              Call: +1 2523709157
+            </a>
+          </div>
+          <div class="flex items-center justify-center md:justify-start hover-bounce">
+            <i class="bi bi-whatsapp text-green-500 text-2xl mr-3"></i>
+            <a href="https://wa.me/+918500556461?text=Hello!" target="_blank" class="hover:text-yellow-400 transition-colors">
+              WhatsApp: +91 8500556461
+            </a>
+          </div>
+          <div class="flex items-center justify-center md:justify-start hover-bounce">
+            <i class="bi bi-envelope-fill text-yellow-500 text-2xl mr-3"></i>
+            <a href="mailto:svsteeldetailing@gmail.com" class="hover:text-yellow-400 transition-colors">
+              svsteeldetailing@gmail.com
+            </a>
+          </div>
+          <div class="flex items-center justify-center md:justify-start hover-bounce">
+            <i class="bi bi-envelope-fill text-yellow-500 text-2xl mr-3"></i>
+            <a href="mailto:janetsvsds@gmail.com" class="hover:text-yellow-400 transition-colors">
+              janetsvsds@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+  
+      <!-- Divider -->
+      <hr class="my-6 border-gray-700">
+  
+      <!-- Copyright -->
+      <div class="text-center">
+        <p class="text-sm">&copy; <span id="currentYear"></span> SVS Detailing Services. All rights reserved.</p>
+        <div class="mt-4 flex items-center justify-center space-x-2">
+          <p class="text-sm">Designed and Developed by</p>
+          <a href="https://github.com/kushwi15" target="_blank" class="flex items-center text-500 hover:text-yellow-400 transition">
+            <img src="img/kushwi-logo.png" alt="Kushwi Logo" class="h-6 mr-2 rounded-full">
+            Kushwi
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

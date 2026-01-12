@@ -1,0 +1,430 @@
+{
+  "reflections": [
+    {
+      "lectureNumber": 1,
+      "title": "Course Introduction and Project Management Fundamentals",
+      "date": "2025-10-12",
+      "topics": [
+        "Course introduction (Dr. Ahmad) and expectations",
+        "Why project management matters beyond coding/studying",
+        "Work environment terminology vs. university learning",
+        "Real-world success/failure examples",
+        "Triple constraint: Cost, Time, Scope"
+      ],
+      "reflection": [
+        "This first lecture reset my mindset about what it means to work in tech: it’s not just coding and grades. Dr. Ahmad emphasized that real work depends heavily on understanding project management language, organizational expectations, and how decisions are made in professional environments. He backed this up with real-life examples of both successful and failed projects, which made the course immediately feel grounded and practical.",
+        "The biggest takeaway was the \"trilogy\" every project must respect: cost, time, and scope. Seeing these as a constant balancing act (not three independent things) made it clear why projects often fail even when the technical work is solid. If you ignore one side of the triangle, it shows up somewhere else—and usually as a painful surprise."
+      ]
+    },
+    {
+      "lectureNumber": 2,
+      "title": "Role of the Project Manager, Stakeholders, and Environments",
+      "date": "2025-10-14",
+      "topics": [
+        "Project manager role and responsibility",
+        "The 10 project management knowledge areas (PMBOK)",
+        "Project success criteria and strategic termination",
+        "Stakeholders and different definitions of success",
+        "Development vs. production environments (definitions and differences)",
+        "Real-life example: university registration system"
+      ],
+      "reflection": [
+        "This lecture went deeper into what makes a project succeed beyond just finishing tasks. A project manager needs to understand the 10 knowledge areas of project management (from the PMBOK framework) and use them to guide the project toward the original goals that were defined at the start. A point that stood out: sometimes stopping (terminating) a failing project is actually the successful decision, because continuing can waste time, money, and credibility.",
+        "We also discussed stakeholders and how \"success\" is not a single definition. Different stakeholders can care about different outcomes (delivery date, cost, quality, reputation, customer impact), and the project manager must navigate these priorities. I liked the reminder that a company is not judged by one failure; we used Microsoft’s mobile effort as an example of a project failure that did not define the company’s overall success.",
+        "Another valuable concept was the difference between development and production environments. A development environment is where features are built, tested, and changed safely without real users being affected; it’s meant for experimentation, debugging, and iteration. A production environment is the live system used by real users, where stability, security, and reliability are non-negotiable. The university registration system example (including the demonstration using a student ID, Fares Hatahet) made this distinction concrete instead of theoretical."
+      ]
+    },
+    {
+      "lectureNumber": 3,
+      "title": "Online Video: PMBOK Knowledge Areas and Enterprise Success",
+      "date": "2025-10-16",
+      "topics": [
+        "PMBOK overview",
+        "10 knowledge areas of project management",
+        "Stakeholder needs and integration",
+        "How project success links to enterprise success"
+      ],
+      "reflection": [
+        "This short online video reinforced the second lecture: the 10 project management knowledge areas are not just theory—they’re the practical toolbox a project manager needs to coordinate people, scope, timelines, risk, communication, and delivery. Seeing them again helped me connect the idea that a PM’s job is fundamentally integration: combining efforts across stakeholders so the project moves as one system instead of disconnected parts.",
+        "It also pushed an important point: successful projects are not the final goal by themselves. Projects are vehicles for enterprise success, and stakeholder satisfaction is part of that chain. If the project creates value for stakeholders and aligns with organizational strategy, the project contributes to long-term business results rather than being a one-time delivery."
+      ]
+    },
+    {
+      "lectureNumber": 4,
+      "title": "Portfolios, Programs, and the PMI Talent Triangle",
+      "date": "2025-10-19",
+      "topics": [
+        "Student portfolio vs. project portfolio management",
+        "Project portfolio management (PPM) and PM role",
+        "Project manager job description and effectiveness traits",
+        "Program vs. project vs. portfolio (definitions and relationships)",
+        "PMI Talent Triangle and its three skill domains"
+      ],
+      "reflection": [
+        "This lecture clarified the meaning of \"portfolio\" depending on context. For us as students, a portfolio is evidence of work, learning, and growth. In organizations, project portfolio management (PPM) is about selecting and managing the right set of projects to maximize value, align with strategy, and manage risk across the organization. That difference matters because it changes how you evaluate what belongs in a portfolio and how you prioritize work.",
+        "We also discussed the role of the project manager, what the job description looks like, and the six traits Dr. Ahmad highlighted for effective project managers. Even without memorizing the traits word-for-word, the message was clear: strong project managers don’t just track tasks—they create clarity, reduce chaos, and keep people aligned under pressure.",
+        "The definitions of project, program, and portfolio were also made clearer. A project is a temporary effort with a specific goal and outcome. A program is a coordinated group of related projects managed together to achieve benefits that you wouldn’t get if you managed them separately. A portfolio sits above programs and projects: it’s the full collection of initiatives an organization chooses to invest in, balanced across priorities, risk, and strategy. Finally, the PMI Talent Triangle tied it all together: Technical Project Management skills, Strategic & Business Management skills, and Leadership skills. The point was straightforward: without leadership and business thinking, technical competence alone won’t carry a project."
+      ]
+    },
+    {
+      "lectureNumber": 5,
+      "title": "Project Management in an IT and Organizational Systems Context",
+      "date": "2025-10-21",
+      "topics": [
+        "Projects as part of a larger system (not just technical tasks)",
+        "Systems approach: philosophy, analysis, management",
+        "Alignment of business, organization, and technology",
+        "Why projects fail: culture, leadership, stakeholder management",
+        "Organizational structures: functional, project, matrix",
+        "Project vs. product life cycles and SDLC models (Waterfall, Spiral, RAD)"
+      ],
+      "reflection": [
+        "This lecture made one message impossible to ignore: treating an IT project as a purely technical assignment is a reliable way to fail. Projects exist inside systems—business strategy, organizational structure, culture, leadership, and stakeholder expectations. The systems approach (philosophy, analysis, and management) framed this clearly: you have to understand the environment, analyze how parts interact, and then manage it intentionally rather than hoping things \"work out.\"",
+        "A key insight was that many project failures happen for non-technical reasons: weak leadership, unhealthy culture, poor stakeholder management, and lack of executive commitment. We also connected this to organizational structure—functional, project-based, and matrix organizations each change how authority, communication, and speed work, and those differences directly affect delivery outcomes.",
+        "The lecture also covered life cycles: project life cycle vs. product life cycle, and how SDLC models (Waterfall, Spiral, RAD) fit into planning and risk. Early phases carry the highest risk but also the highest influence—choices made early shape cost, scope, and feasibility later. The bottom line was clear: ignoring the organizational and managerial side isn’t a small weakness; it’s a guaranteed failure path."
+      ]
+    },
+    {
+      "lectureNumber": 6,
+      "title": "Online Video: Waterfall Model Overview",
+      "date": "2025-10-23",
+      "topics": [
+        "Waterfall model as a sequential SDLC approach",
+        "Typical phases (requirements through maintenance)",
+        "Why phase completion gates exist",
+        "Strengths and limitations of Waterfall"
+      ],
+      "reflection": [
+        "This online video focused on the Waterfall model and its sequential nature: each phase is completed before the next one begins, and the output of one phase becomes the input of the next. The phases were explained at a high level as requirements (understanding what needs to be built), design (planning how it will be built), implementation (building the system), testing (verifying correctness and catching defects), deployment (releasing to the real environment), and maintenance (supporting and improving after release).",
+        "What clicked for me is why Waterfall can feel stable: it forces structure, documentation, and clear checkpoints. But that same structure creates a weakness—late changes become expensive and risky because earlier phases are already \"locked.\" So Waterfall can work well when requirements are stable and well understood, but it becomes painful in fast-changing environments where feedback and iteration are constant."
+      ]
+    },
+    {
+      "lectureNumber": 7,
+      "title": "Online Video: Waterfall vs. Agile and the Agile Manifesto",
+      "date": "2025-10-30",
+      "topics": [
+        "Waterfall drawbacks in modern environments",
+        "Agile methodology and iterative delivery",
+        "Microservices / incremental development and reduced downtime",
+        "Stakeholder reviews, trial versions, and feedback loops",
+        "Agile Manifesto as a guiding framework",
+        "Real-world examples mentioned (Adobe beta, Cisco, Sony)"
+      ],
+      "reflection": [
+        "This video drew a sharp contrast between the traditional Waterfall model and Agile methodology. Waterfall treats the product as one unit and forces strict phase dependency, which makes changes high-risk and can require re-running large parts of the development cycle. It also highlighted how deployment in this approach can involve downtime, which becomes a serious problem for modern systems that need continuous availability.",
+        "Agile was presented as a practical solution to these limitations by breaking delivery into smaller increments (even described in the video using microservices/phased delivery), enabling frequent updates \"on the go\" with less downtime. The focus shifts toward stakeholder feedback, trial versions, and consumer needs—Adobe’s beta releases were mentioned as an example of this mindset. The video also referenced business impact examples: Cisco reducing defects by 40% and Sony saving $30 million annually by reducing planning time and downtime. The overall conclusion was that the Agile Manifesto supports the flexibility required for today’s fast-changing environments."
+      ]
+    },
+    {
+      "lectureNumber": 8,
+      "title": "Development Environments, Hiring Fit, and Intro to Data Flow Charts",
+      "date": "2025-11-04",
+      "topics": [
+        "Developer work environment and toolchain fit",
+        "Risk of mismatched tech stacks in hiring",
+        "Off-topic discussion: pronunciation of \"opportunity\"",
+        "Brief introduction to data flow charts",
+        "Converting flow charts to paragraphs and vice versa"
+      ],
+      "reflection": [
+        "This lecture emphasized how much the developer environment matters in real teams. Dr. Ahmad gave a clear hiring example: if a student is experienced in PHP but the university development team works in .NET, the mismatch becomes a long-term operational risk. If the student joins and later drops out, the team is stuck with a gap that is hard to replace because the environment and stack require a specific skill fit. The lesson was blunt but realistic: teams avoid avoidable risk, and technology alignment is part of stability.",
+        "We also had a small off-topic moment about the pronunciation of the word \"opportunity,\" which honestly made the lecture feel more human and relaxed.",
+        "At the end, we briefly touched on data flow charts. Even though we didn’t go deep, the key idea was that they help describe how data moves through a system: from external entities into processes, into data stores, and back out as outputs. We also discussed how you can convert a flow chart into a paragraph description (and vice versa), which matters because documentation often needs both a visual map and a written explanation depending on the audience."
+      ]
+    },
+    {
+      "lectureNumber": 9,
+      "title": "Online Video: Scrum Framework (Roles, Artifacts, Ceremonies)",
+      "date": "2025-11-06",
+      "topics": [
+        "Scrum as an Agile implementation",
+        "Sprints (1–3 week cycles) and potentially shippable increments",
+        "Roles: Product Owner, Scrum Master, Team",
+        "Artifacts: Product Backlog, Sprint Backlog, Burndown Charts",
+        "Ceremonies: Sprint Planning, Daily Scrum, Sprint Review/Retrospective"
+      ],
+      "reflection": [
+        "This video focused on Scrum and explained why it works as a modern alternative to Waterfall. Instead of long planning phases and slow feedback, Scrum runs in short 1–3 week cycles called Sprints. The goal is not perfection at the end of the year—it’s delivering a potentially shippable product increment at the end of every cycle with \"just enough\" planning to move forward safely.",
+        "The structure was explained clearly through the three pillars of Scrum. Roles: the Product Owner defines and prioritizes features, the Scrum Master protects the process as a servant leader, and the Team builds the product. Artifacts: the Product Backlog holds prioritized user stories, the Sprint Backlog captures what the team commits to this Sprint, and Burndown Charts visualize progress. Ceremonies: Sprint Planning sets the increment, the Daily Scrum surfaces blockers, and the Sprint Review/Retrospective validates results and improves the process. Repeating this loop is what enables faster delivery while staying aligned with real market and stakeholder needs."
+      ]
+    },
+    {
+      "lectureNumber": 10,
+      "title": "Flow Charts, UML Actors, and Smoke Testing Basics",
+      "date": "2025-11-09",
+      "topics": [
+        "Flow charts as a universal problem-solving tool",
+        "Branches and maintaining correct flow",
+        "UML definition and how it helps project management",
+        "UML actors and correct representation",
+        "Actors vs. users (systems can be actors too)",
+        "Smoke testing (definition and why it’s called \"smoke\")"
+      ],
+      "reflection": [
+        "We continued with flow charts and why they make work easier. A major point was that a strong programmer can translate a flow chart into code regardless of language, because the logic is what matters. We also discussed that flow charts aren’t forced to be strictly top-to-bottom; they can branch, loop, and represent real decision paths as long as the flow remains consistent and readable.",
+        "Then we moved into UML: what it is, how it helps, what its components are, and how to draw it properly for managing a project. I learned that actors in UML are not limited to humans. Every user is an actor, but not every actor is a user—an external system can be an actor too. Dr. Ahmad even emphasized that UML should be drawn simply using black stick figures (he explicitly said \"black stickmen boy\"). When he asked about the university system, we identified the student as an example of an actor.",
+        "We also had a brief mention of smoke testing. The core idea is that it’s an initial, basic check to confirm a build or system is stable enough to proceed with deeper testing. The name comes from the idea of catching obvious failures early—like turning something on and seeing if it literally \"smokes\" or immediately breaks—before investing time in detailed test cycles."
+      ]
+    },
+    {
+      "date": "2025-11-11",
+      "title": "Entity Relationship Diagrams and System Architecture",
+      "topics": [
+        "From use cases to flowcharts to system pages",
+        "Database administrator role",
+        "ERDs guiding table design",
+        "System architecture: frontend, backend, middle layer (APIs/web services)"
+      ],
+      "reflection": [
+        "This lecture helped me understand how system analysis moves from abstract ideas to concrete database design. We recapped how use cases can be transformed into flowcharts and then into actual pages within a system.",
+        "The role of the database administrator became clearer, especially how ERDs guide the creation of tables that support application pages.",
+        "I also gained a clearer view of system architecture: the frontend focuses on user interface and logic, the backend manages the database, and the middle layer connects them through APIs and web services."
+      ],
+      "lectureNumber": 11
+    },
+    {
+      "lectureNumber": 12,
+      "title": "Online Video: Process Flow Charts (Lean Six Sigma)",
+      "date": "2025-11-13",
+      "topics": [
+        "Process flow charts for visualizing workflows",
+        "Capturing the \"as-is\" state before improving a process",
+        "Standard symbols: start/end, activities, decisions, arrows",
+        "Advanced mapping: subprocesses, documents, connectors",
+        "Macro maps vs. swim lane diagrams",
+        "Flow charts vs. SOPs for operational training"
+      ],
+      "reflection": [
+        "This video introduced process flow charts as a core tool in Lean Six Sigma for mapping how a process actually works. The main idea was that improvement starts with accuracy: before you fix a system, you must capture its current \"as-is\" state through process mapping. Without that baseline, you risk optimizing something that isn’t real.",
+        "It also explained a standard visual language: ellipses for start/end, rectangles for activities (like picking or packing), diamonds for decision points with yes/no outcomes, and arrows for direction. The video mentioned more advanced additions like subprocesses, documents, and connectors. I liked the distinction between macro process maps (management-level overview) and swim lane diagrams that separate \"who does what\" by grouping tasks by responsible party.",
+        "A practical reminder at the end was that flow charts are great for visualization, but they are usually paired with Standard Operating Procedures (SOPs) because people need step-by-step detail for training, not just a diagram."
+      ]
+    },
+    {
+      "date": "2025-11-16",
+      "title": "Weak Entities, Relationships, and Attributes",
+      "topics": [
+        "Weak entities vs. strong entities",
+        "Weak relationships (practical examples)",
+        "Employees and dependents example",
+        "Attribute types: multi-valued, derived, composite, key"
+      ],
+      "reflection": [
+        "This lecture expanded on ERD concepts by revisiting weak relationships and introducing weak entities through practical examples.",
+        "Using employees and their dependents clarified how some entities cannot exist independently and must rely on others.",
+        "We also explored different types of attributes, such as multi-valued, derived, composite, and key attributes, which helped me understand how real-world data complexity is represented accurately within database models."
+      ],
+      "lectureNumber": 13
+    },
+    {
+      "date": "2025-11-18",
+      "title": "Types of Relationships in ERD",
+      "topics": [
+        "Unary, binary, ternary relationships",
+        "Entity interaction modeling",
+        "Cardinality: one-to-one, one-to-many, many-to-many"
+      ],
+      "reflection": [
+        "This lecture focused on different types of relationships used in entity relationship diagrams.",
+        "We learned how unary, binary, and ternary relationships describe how entities interact within a system.",
+        "The discussion of cardinality clarified the differences between one-to-one, one-to-many, and many-to-many relationships."
+      ],
+      "lectureNumber": 14
+    },
+    {
+      "lectureNumber": 15,
+      "title": "AI as a Trend Discussion and SWOT Analysis Introduction",
+      "date": "2025-11-25",
+      "topics": [
+        "Discussion: AI as a trend / \"bubble\"",
+        "How many majors trace back to computer science foundations",
+        "SWOT analysis in project management",
+        "Using SWOT to evaluate viability, risk, and strategic fit"
+      ],
+      "reflection": [
+        "This lecture included a direct discussion about AI, framed as a trend or even a \"bubble\" rather than guaranteed long-term value. We also talked about majors in general and how many paths eventually trace back to computer science foundations. Whether I fully agree or not, the discussion was useful because it forced a more strategic view: hype can drive decisions, but organizations still need to invest based on real value and long-term capability, not excitement.",
+        "We then introduced SWOT analysis in a project management context. SWOT organizes thinking into Strengths and Weaknesses (internal factors) and Opportunities and Threats (external factors). What made it feel practical is that it’s not just a business exercise—it supports project decisions too: whether a project should start, how it should be positioned, where risks are hiding, and what capabilities need to be strengthened. Done properly, SWOT becomes a structured way to align stakeholders around reality instead of assumptions."
+      ]
+    },
+    {
+      "lectureNumber": 16,
+      "title": "Online Video: SWOT Analysis",
+      "date": "2025-11-27",
+      "topics": [
+        "SWOT matrix structure (Strengths, Weaknesses, Opportunities, Threats)",
+        "Internal vs. external factors",
+        "Turning SWOT findings into action",
+        "Using SWOT for strategy and project decision-making"
+      ],
+      "reflection": [
+        "This short video focused specifically on SWOT analysis and reinforced the main idea from the previous lecture: SWOT is only useful when it leads to decisions, not when it stays as a list. It clarified how strengths and weaknesses describe internal reality (resources, skills, constraints), while opportunities and threats describe external reality (market shifts, competitors, technology changes, regulations).",
+        "What I took from it is that SWOT can be used like a filter before committing to a project: it helps you see whether the project is leveraging real strengths, whether weaknesses are likely to cause delays or failure, and whether external threats can disrupt delivery. It also pushes you to act on opportunities intentionally rather than noticing them too late."
+      ]
+    },
+    {
+      "date": "2025-12-02",
+      "title": "Introduction to the Critical Path Method (CPM)",
+      "topics": [
+        "Critical Path Method (CPM)",
+        "Schedule control and planning",
+        "Identifying task sequences that determine project duration",
+        "Focusing management attention on time-critical activities"
+      ],
+      "reflection": [
+        "This lecture introduced the Critical Path Method as a practical tool for controlling project schedules.",
+        "I learned how identifying the sequence of tasks that directly determine project duration helps managers focus on what truly affects delivery time."
+      ],
+      "lectureNumber": 17
+    },
+    {
+      "lectureNumber": 18,
+      "title": "Online Video: Project Scheduling with PERT/CPM and Critical Path",
+      "date": "2025-12-04",
+      "topics": [
+        "PERT/CPM scheduling and building an activity network",
+        "ES/EF/LS/LF timing values",
+        "Forward pass and backward pass calculations",
+        "Slack and identifying critical activities",
+        "Critical path as the longest sequence determining project duration"
+      ],
+      "reflection": [
+        "This video focused on project scheduling using the PERT/CPM method to identify the Critical Path. It starts by building a network where each activity node includes its duration and four timing values: Earliest Start (ES), Earliest Finish (EF), Latest Start (LS), and Latest Finish (LF). Those values turn scheduling from guesswork into a structured analysis.",
+        "The process relies on two phases. The forward pass finds the minimum completion time by calculating ES and EF for each task; when a task has multiple predecessors, its ES is the highest EF among them. The backward pass works from the end to calculate LS and LF, where the LF of an activity becomes the minimum LS of its successors.",
+        "From these values you calculate slack (LS minus ES), which shows how long an activity can be delayed without affecting the final delivery date. Activities with zero slack are critical, forming the Critical Path. Because this path defines the project’s duration, any delay on it directly delays the project."
+      ]
+    },
+    {
+      "lectureNumber": 19,
+      "title": "Critical Path in Project Management (Lecture Reflection)",
+      "date": "2025-12-07",
+      "topics": [
+        "Critical path concept and why it matters",
+        "Critical activities vs. non-critical activities",
+        "Slack as scheduling flexibility",
+        "How critical path supports prioritization and control"
+      ],
+      "reflection": [
+        "This lecture reinforced the idea that the Critical Path is not just a calculation—it’s a control tool. It tells you which activities are truly \"time-sensitive\" and which ones have flexibility (slack). That matters because not all delays are equal: a delay on a non-critical task might be manageable, but a delay on a critical activity immediately pushes the entire project completion date.",
+        "What I appreciated is how this changes day-to-day management. Instead of treating every task as equally urgent, the critical path helps prioritize attention, monitoring, and escalation. It gives a rational basis for decision-making when resources are limited: protect the critical activities first, and manage non-critical tasks using slack without creating panic or wasting effort."
+      ]
+    },
+    {
+      "lectureNumber": 20,
+      "title": "AI in Project Management: Predictive Tools vs. Real Intelligence",
+      "date": "2025-12-09",
+      "topics": [
+        "AI in project management discussion",
+        "AI described as a trend / \"bubble\"",
+        "AI as prediction without consciousness",
+        "Distinguishing hype from practical value"
+      ],
+      "reflection": [
+        "This lecture continued the AI discussion, and Dr. Ahmad repeated a strong position: AI is a bubble and a trend that will eventually fade. He supported that view by referencing his background (including that his master’s thesis was in machine learning), and he framed AI as not \"real\" intelligence because it lacks consciousness—meaning it doesn’t understand the world, it predicts patterns based on data.",
+        "Even if someone disagrees with the conclusion, the framing was valuable because it forces a clearer definition: what do we actually mean by intelligence, and what do these systems truly do? In a project management context, the practical takeaway is to separate useful tools from marketing hype. A predictive machine can still be valuable for forecasting, risk signals, estimation support, and automation—but relying on it as if it has judgment or accountability is a category mistake. Projects succeed when people make disciplined decisions and manage change, not when they blindly trust trends."
+      ]
+    },
+    {
+      "lectureNumber": 21,
+      "title": "Independent Reading: Project Management as a Craft (Dr. Mike Clayton)",
+      "date": "2025-12-11",
+      "topics": [
+        "PM as a craft focused on people and change",
+        "ShuHaRi model of mastery (Shu, Ha, Ri)",
+        "Professionalization and reducing failure rates",
+        "Speaking truth to power under unrealistic parameters",
+        "Career advice: patience, resilience, creating order from chaos"
+      ],
+      "reflection": [
+        "This reading explored the career insights of Dr. Mike Clayton and presented project management as a craft rather than a purely technical discipline. The central argument was that PM is fundamentally about managing people, expectations, and change. Technical understanding helps, but success depends more on leadership, communication, and the ability to create structure when situations are messy.",
+        "A core model discussed was ShuHaRi: Shu (learning in a structured way by following the rules), Ha (applying that learning within established frameworks), and Ri (using full knowledge to innovate and create something new). I liked this because it frames growth realistically: mastery isn’t instant—it’s a progression from discipline to adaptation to creativity.",
+        "The reading also raised a serious point about professionalization, especially because of high failure rates in major projects (particularly in the public sector). A standout idea was that project managers must learn to \"speak truth to power\"—to challenge unrealistic parameters and political pressure instead of silently accepting impossible targets. The career advice was also grounded: strong PM careers are built over time through patience, resilience, and the ability to create order out of chaos."
+      ]
+    },
+    {
+      "date": "2025-12-21",
+      "title": "Project Reports and Group Presentations (Change & Requirements)",
+      "topics": [
+        "Project reports structure",
+        "Change and Configuration Management",
+        "Requirement Engineering",
+        "Evaluation and guidance of presentations"
+      ],
+      "reflection": [
+        "It was a lecture that continued discussing the project reports and how presentations should be organized.",
+        "The first group talked about Change and Configuration Management and how it supports system stability.",
+        "The second group presented Requirement Engineering and explained its importance in successful IT projects.",
+        "Most students attended to understand how the doctor would evaluate and guide the groups."
+      ],
+      "lectureNumber": 22
+    },
+    {
+      "date": "2025-12-23",
+      "title": "IT Infrastructure, Deployment, and Governance",
+      "topics": [
+        "IT Infrastructure",
+        "System deployment",
+        "IT governance",
+        "Compliance and organizational standards"
+      ],
+      "reflection": [
+        "This lecture included two group presentations that focused on general infrastructure and governance concepts.",
+        "The first group discussed IT Infrastructure and System Deployment in a broad way related to project environments.",
+        "The second group talked about IT Governance and Compliance and its role in maintaining control and standards.",
+        "The session helped students understand how technical systems relate to organizational rules."
+      ],
+      "lectureNumber": 23
+    },
+    {
+      "date": "2025-12-28",
+      "title": "SDLC and the Waterfall Model",
+      "topics": [
+        "System Development Life Cycle (SDLC)",
+        "Waterfall model",
+        "Sequential development approach",
+        "Interactive learning activities"
+      ],
+      "reflection": [
+        "The lecture focused on system development approaches through two main presentations.",
+        "The first group explained the SDLC and how projects move through different development stages.",
+        "The second group introduced the Waterfall model and described its general sequential structure.",
+        "This lecture was special as the second group set up Kahoot activity for audience engagement."
+      ],
+      "lectureNumber": 24
+    },
+    {
+      "date": "2025-12-30",
+      "title": "Agile Models, Risk Management, and Monitoring Tools",
+      "topics": [
+        "Agile development model",
+        "Technology risk management",
+        "Agile project monitoring tools",
+        "Managing project uncertainty"
+      ],
+      "reflection": [
+        "This lecture had three presentations that covered modern and risk-related project topics.",
+        "The first group presented the Agile model and its focus on flexibility and iterations.",
+        "The second group talked about Technology Risk Management and general challenges in IT projects.",
+        "The third group introduced Agile Project Monitoring Tools and how they support tracking progress."
+      ],
+      "lectureNumber": 25
+    },
+    {
+      "date": "2026-01-04",
+      "title": "Final Project Presentations and Course Closure",
+      "topics": [
+        "Testing and validation",
+        "Project monitoring tools",
+        "Final project evaluation",
+        "Course closure and feedback"
+      ],
+      "reflection": [
+        "This lecture included the final project presentations and marked the end of the course.",
+        "Our group presented Testing and Validation and discussed its importance in ensuring system quality.",
+        "The second group talked about Project Monitoring Tools as the last topic in the course.",
+        "The lecture concluded with general feedback and closing remarks about the course and the project."
+      ],
+      "lectureNumber": 26
+    }
+  ]
+}

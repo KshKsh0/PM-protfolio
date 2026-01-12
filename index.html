@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmad Al-Hmouz | Portfolio</title>
+  <meta name="description" content="Student portfolio for Project Management IT (Fall 2025) — Ahmad Al-Hmouz." />
+  <link rel="icon" href="img/icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body class="min-h-screen text-white noise">
+
+<div id="pageTransition" class="page-transition" aria-hidden="true"></div>
+
+
+<!-- Animated background blobs -->
+<div class="pointer-events-none fixed inset-0 overflow-hidden">
+  <div class="blob violet"></div>
+  <div class="blob cyan"></div>
+  <div class="blob blue"></div>
+</div>
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/80 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="img/icon.png" alt="Portfolio icon" class="h-9 w-9 rounded-xl" />
+      <div class="leading-tight">
+        <div class="text-base font-semibold text-white">Ahmad Al-Hmouz</div>
+        <div class="text-xs text-slate-300">AI • University of Jordan</div>
+      </div>
+    </a>
+
+    <button id="menuBtn" class="md:hidden rounded-xl border border-white/10 px-3 py-2 text-slate-200 hover:bg-white/5" aria-label="Open menu">
+      <i class="bi bi-list text-xl"></i>
+    </button>
+
+    <div class="hidden items-center gap-6 text-sm font-medium text-slate-200 md:flex">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="assignments.html">Assignments</a>
+      <a class="navlink" href="activities.html">Activities & Video</a>
+      <a class="navlink" href="skills.html">Skills</a>
+      <a class="navlink" href="reflection.html">Reflection</a>
+      <a class="navlink" href="favorites.html">Favorite Websites</a>
+      <a class="navlink" href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-900 md:hidden">
+    <div class="mx-auto grid max-w-6xl gap-1 px-4 py-3 text-sm font-medium text-slate-200">
+      <a class="navlink navlink-mobile" href="index.html">Home</a>
+      <a class="navlink navlink-mobile" href="assignments.html">Assignments</a>
+      <a class="navlink navlink-mobile" href="activities.html">Activities & Video</a>
+      <a class="navlink navlink-mobile" href="skills.html">Skills</a>
+      <a class="navlink navlink-mobile" href="reflection.html">Reflection</a>
+      <a class="navlink navlink-mobile" href="favorites.html">Favorite Websites</a>
+      <a class="navlink navlink-mobile" href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="mx-auto max-w-6xl px-4 py-10 page-main">
+  <section class="grid gap-8 md:grid-cols-2">
+    <div class="space-y-5">
+      <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-200">
+        <i class="bi bi-mortarboard"></i>
+        <span>Portfolio — Project Management IT</span>
+      </div>
+      <h1 class="text-3xl font-bold leading-tight md:text-4xl">
+        Ahmad Al-Hmouz
+      </h1>
+      <div class="muted space-y-1 text-sm">
+        <div><span class="text-slate-300">University ID:</span> 0228229</div>
+        <div><span class="text-slate-300">University:</span> University of Jordan</div>
+        <div><span class="text-slate-300">Faculty & Major:</span> KASIT — Artificial Intelligence</div>
+        <div><span class="text-slate-300">Instructor:</span> Ahmad H. Kheraisat</div>
+        <div><span class="text-slate-300">Semester:</span> Fall 2025</div>
+      </div>
+
+      <div class="glass rounded-2xl p-5">
+        <div class="flex items-start gap-3">
+          <i class="bi bi-quote text-xl text-slate-300"></i>
+          <div>
+            <p class="text-base italic text-slate-100">
+              “Doing the same thing and expecting different results.”
+            </p>
+            <p class="mt-2 text-xs text-slate-400">— Albert Einstein</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="assets/Ahmad_Al-Hmouz_CV.pdf" class="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-200">
+          <i class="bi bi-file-earmark-person me-2"></i>View CV (PDF)
+        </a>
+        <a href="contact.html" class="rounded-2xl border border-white/10 px-5 py-3 text-sm font-semibold text-white hover:bg-white/5">
+          <i class="bi bi-envelope me-2"></i>Contact
+        </a>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="glass rounded-2xl p-6">
+        <h2 class="text-lg font-semibold">Quick Navigation</h2>
+        <p class="muted mt-2 text-sm">Use the sections below to browse required portfolio components.</p>
+        <div class="mt-5 grid gap-3 sm:grid-cols-2">
+          <a class="glass rounded-2xl p-4 hover:bg-white/5" href="assignments.html">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="font-semibold">Assignments</div>
+                <div class="muted text-xs">Files & details</div>
+              </div>
+              <i class="bi bi-folder2-open text-xl text-slate-300"></i>
+            </div>
+          </a>
+          <a class="glass rounded-2xl p-4 hover:bg-white/5" href="activities.html">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="font-semibold">Activities & Video</div>
+                <div class="muted text-xs">Extracurriculars</div>
+              </div>
+              <i class="bi bi-camera-video text-xl text-slate-300"></i>
+            </div>
+          </a>
+          <a class="glass rounded-2xl p-4 hover:bg-white/5" href="reflection.html">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="font-semibold">Reflection</div>
+                <div class="muted text-xs">Loaded from JSON</div>
+              </div>
+              <i class="bi bi-journal-text text-xl text-slate-300"></i>
+            </div>
+          </a>
+          <a class="glass rounded-2xl p-4 hover:bg-white/5" href="favorites.html">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="font-semibold">Favorite Websites</div>
+                <div class="muted text-xs">Academic resources</div>
+              </div>
+              <i class="bi bi-book text-xl text-slate-300"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="grid gap-4 md:grid-cols-2">
+        <!-- Tilt / feature card -->
+        <div data-tilt="12" class="tilt glass neon rounded-2xl p-6 transition-transform duration-150 will-change-transform">
+          <div class="tilt-inner">
+            <div class="text-xs uppercase tracking-widest text-slate-300">Focus</div>
+            <h2 class="section-title mt-2 text-xl font-semibold">
+              <span class="accent">AI</span> + Practical Engineering
+            </h2>
+            <p class="muted mt-3 text-sm">
+              Python • ML/DL • Computer Vision • FastAPI
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2 text-xs">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Research</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Projects</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">UI/UX</span>
+               <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1">Ai Engineer</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Obvious moving content on the right -->
+        <div data-marquee class="marquee glass rounded-2xl p-4">
+          <div class="marquee-track">
+            <div class="glass-strong rounded-2xl border border-white/10 p-4">
+              <div class="text-sm font-semibold">Currently</div>
+              <div class="muted mt-1 text-xs">EEG multi-class classification (DL)</div>
+            </div>
+            <div class="glass-strong rounded-2xl border border-white/10 p-4">
+              <div class="text-sm font-semibold">Tooling</div>
+              <div class="muted mt-1 text-xs">PyTorch • TensorFlow • OpenCV</div>
+            </div>
+            <div class="glass-strong rounded-2xl border border-white/10 p-4">
+              <div class="text-sm font-semibold">Backend</div>
+              <div class="muted mt-1 text-xs">FastAPI • REST • MongoDB/MySQL</div>
+            </div>
+            <div class="glass-strong rounded-2xl border border-white/10 p-4">
+              <div class="text-sm font-semibold">Design</div>
+              <div class="muted mt-1 text-xs">Figma • user-centered UI</div>
+            </div>
+            <div class="glass-strong rounded-2xl border border-white/10 p-4">
+              <div class="text-sm font-semibold">Hackathon</div>
+              <div class="muted mt-1 text-xs">Build with AI 2025 — 7th place</div>
+            </div>
+            <div class="glass-strong rounded-2xl border border-white/10 p-4">
+              <div class="text-sm font-semibold">Soft Skills</div>
+              <div class="muted mt-1 text-xs">Communication • Leadership • Organization</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="border-t border-white/10 py-10">
+  <div class="mx-auto max-w-6xl px-4 text-sm text-slate-400">
+    <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+      <div>© <span id="year"></span> Ahmad Al-Hmouz — Portfolio</div>
+      <div class="text-slate-500">Fall 2025 • Project Management IT</div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+<script src="assets/app.js"></script>
+
+</body>
+</html>

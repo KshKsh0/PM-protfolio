@@ -1,0 +1,46 @@
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/80 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="img/icon.png" alt="Portfolio icon" class="h-9 w-9 rounded-xl" />
+      <div class="leading-tight">
+        <div class="text-base font-semibold text-white">Ahmad Al-Hmouz</div>
+        <div class="text-xs text-slate-300">AI • University of Jordan</div>
+      </div>
+    </a>
+
+    <button id="menuBtn" class="md:hidden rounded-xl border border-white/10 px-3 py-2 text-slate-200 hover:bg-white/5" aria-label="Open menu">
+      <i class="bi bi-list text-xl"></i>
+    </button>
+
+    <div class="hidden items-center gap-6 text-sm font-medium text-slate-200 md:flex">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="assignments.html">Assignments</a>
+      <a class="navlink" href="activities.html">Activities & Video</a>
+      <a class="navlink" href="skills.html">Skills</a>
+      <a class="navlink" href="reflection.html">Reflection</a>
+      <a class="navlink" href="favorites.html">Favorite Websites</a>
+      <a class="navlink" href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-900 md:hidden">
+    <div class="mx-auto grid max-w-6xl gap-1 px-4 py-3 text-sm font-medium text-slate-200">
+      <a class="navlink navlink--mobile" href="index.html">Home</a>
+      <a class="navlink navlink--mobile" href="assignments.html">Assignments</a>
+      <a class="navlink navlink--mobile" href="activities.html">Activities & Video</a>
+      <a class="navlink navlink--mobile" href="skills.html">Skills</a>
+      <a class="navlink navlink--mobile" href="reflection.html">Reflection</a>
+      <a class="navlink navlink--mobile" href="favorites.html">Favorite Websites</a>
+      <a class="navlink navlink--mobile" href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  }
+</script>

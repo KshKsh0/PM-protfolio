@@ -1,0 +1,18 @@
+{
+  "assignments": [
+    {
+      "name": "paper about the testing ",
+      "file": "assignments/paper.pdf"
+    },
+
+     {
+      "name": "portfolio ",
+      "link": "https://github.com/KshKsh0/PM-Portfolio"
+    },
+    {"name": "ST project ",
+      "file": "assignments/Exploring GAN Variants for Balancing Imbalanced Datasets.pdf"}
+  ]
+
+
+  
+}

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Platform</title>
+  <link rel="icon" href="img/icon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Fade-in and slide-up animation */
+    @keyframes fadeInSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInSlideUp 1s ease-out forwards;
+    }
+
+    .animate-fade-in-up:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .animate-fade-in-up:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .animate-fade-in-up:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+    .animate-fade-in-up:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+
+    /* Card hover effect */
+    .hover-transform:hover {
+      transform: translateY(-10px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Image hover effect */
+    .hover-zoom:hover img {
+      transform: scale(1.1);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    /* Title hover effect */
+    .hover-color:hover h3 {
+      color: #ff5733; /* Vibrant gradient-inspired color */
+      transition: color 0.3s ease-in-out;
+    }
+
+    /* Logo hover and bounce effect */
+    .logo-hover:hover {
+      transform: scale(1.15) rotate(-2deg);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    /* Fade-in animation for logos */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    .fade-in:nth-child(1) {
+      animation-delay: 0.3s;
+    }
+    .fade-in:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    .fade-in:nth-child(3) {
+      animation-delay: 0.7s;
+    }
+    .fade-in:nth-child(4) {
+      animation-delay: 0.9s;
+    }
+
+    /* Button hover effect */
+    .hover-glow:hover {
+      box-shadow: 0 10px 25px rgba(255, 87, 51, 0.6);
+      transform: scale(1.05);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+        /* Hover bounce animation for icons */
+        .hover-bounce:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+
+
+<body class="bg-gray-100 text-gray-800">
+
+<div id="pageTransition" class="page-transition" aria-hidden="true"></div>
+
+
+  <!-- Hovering WhatsApp & Mail & Phone -->
+  <div style="position: fixed; bottom: 323px; right: 30px; z-index: 1000;">
+    <a href="https://wa.me/+918500556461?text=Hello!" target="_blank" style="text-decoration: none;">
+      <img 
+        src="img/wpicon.webp" 
+        alt="WhatsApp Icon" 
+        style="width: 75px; height: 75px; transition: transform 0.3s ease; z-index: 1000;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"/>
+    </a>
+  </div>  
+
+  <div style="position: fixed; bottom: 245px; right: 22px; z-index: 1000;">
+    <a href="tel:+12523709157" style="text-decoration: none;">
+      <img 
+        src="img/phoneicon.png" 
+        alt="Phone Icon" 
+        style="width: 90px; height: 85px; transition: transform 0.3s ease; cursor: pointer; z-index: 1000;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"
+      />
+    </a>
+  </div> 
+
+  <div style="position: fixed; bottom: 175px; right: 30px; z-index: 1000;">
+    <a href="mailto:svsteeldetailing@gmail.com" target="_blank" style="text-decoration: none;">
+      <img 
+        src="img/mailicon.png" 
+        alt="Mail Icon" 
+        style="width: 75px; height: 75px; transition: transform 0.3s ease; z-index: 1000;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"/>
+    </a>
+  </div>
+
+<!-- Navbar -->
+<nav 
+  class="navbar fixed w-full z-20 top-0 left-0 shadow-lg backdrop-filter backdrop-blur-md transition duration-300" 
+  style="background: linear-gradient(90deg, #3b3c3d, #335b83, #3b3c3d); /* Gradient Blue */">
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <img 
+        src="img/logo.png" 
+        alt="SV Steel Detailing Logo" 
+        style="height: 70px; max-height: 100%; object-fit: contain; margin-right: 12px; transition: transform 0.3s;" 
+        onmouseover="this.style.transform='scale(1.1)'" 
+        onmouseout="this.style.transform='scale(1)'"
+      >
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="hidden md:flex space-x-8">
+      <a href="index.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Home
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="about.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        About
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="services.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Services
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="Portfolio.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Portfolio
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="project.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Projects
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a href="contact.html" class="text-white text-lg font-medium hover:text-blue-300 transition-all duration-300 relative group">
+        Contact
+        <span class="absolute w-0 h-1 bg-blue-300 bottom-0 left-0 group-hover:w-full transition-all duration-300"></span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="menu-toggle" class="text-white md:hidden focus:outline-none hover:text-blue-300 transition-transform hover:scale-110">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation Links -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 py-4 space-y-4" style="background-color: #3b3c3d, #335b83, #3b3c3d; /* Deep Blue */">
+    <a href="index.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Home</a>
+    <a href="about.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">About</a>
+    <a href="services.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Services</a>
+    <a href="Portfolio.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Portfolio</a>
+    <a href="project.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Projects</a>
+    <a href="contact.html" class="block text-white text-lg font-medium hover:text-blue-300 text-center">Contact</a>
+  </div>
+</nav>
+  
+  <script>
+    // Toggle Mobile Menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('block');
+    });
+  </script>
+
+<!-- Services Section -->
+<section id="services" class="py-16 mt-16 bg-[#335B83]">
+  <div class="container mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-white">
+        Our Services
+      </h2>
+      <p class="text-lg text-gray-300 mt-4 max-w-2xl mx-auto">
+        We offer a comprehensive suite of on-time, competitively-priced services for the steel construction industry. Our specialties include structural steel detailing, miscellaneous steel detailing, connection design, and material take-offs.
+      </p>
+    </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 hover:bg-gray-700 hover-zoom hover-color transition-all duration-300 ease-in-out animate-fade-in-up">
+          <h3 class="text-xl font-bold text-amber-500 mb-4">01. Structural Steel Detailing</h3>
+          <p class="text-gray-300 mb-4">
+            Our team of detailers can handle projects of any size and complexity. We specialize in large, complex steel structures like stadiums, bridges, and hospitals.
+          </p>
+          <div class="overflow-hidden rounded-md">
+            <img src="img/structural.jpg" alt="Structural Steel Detailing" class="rounded-md shadow-md w-full h-auto object-cover">
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 hover:bg-gray-700 hover-zoom hover-color transition-all duration-300 ease-in-out animate-fade-in-up">
+          <h3 class="text-xl font-bold text-amber-500 mb-4">02. Misc Steel Detailing</h3>
+          <p class="text-gray-300 mb-4">
+            We provide various Misc Steel detailing services which include Grating, Stairs, Handrails, Ladders, Girts, Canopies, Gates, etc.
+          </p>
+          <div class="overflow-hidden rounded-md">
+            <img src="img/misc3.png" alt="Misc Steel Detailing" class="rounded-md shadow-md w-full h-auto object-cover">
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 hover:bg-gray-700 hover-zoom hover-color transition-all duration-300 ease-in-out animate-fade-in-up">
+          <h3 class="text-xl font-bold text-amber-500 mb-4">03. Connection Design</h3>
+          <p class="text-gray-300 mb-4">
+            SVS Detailing Services provides connection design service to our clients through our engineering partners in multiple countries and assures timely delivery.
+          </p>
+          <div class="overflow-hidden rounded-md">
+            <img src="img/connection.jpg" alt="Connection Design" class="rounded-md shadow-md w-full h-auto object-cover">
+          </div>
+        </div>
+      </div>
+
+<!-- Second Row of Services (Centered Services 4 and 5) -->
+<div class="flex flex-wrap justify-center gap-8 mt-8">
+  <!-- Service 4 -->
+  <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 hover:bg-gray-700 hover-zoom hover-color transition-all duration-300 ease-in-out animate-fade-in-up w-full sm:w-1/2 md:w-1/3">
+    <h3 class="text-xl font-bold text-amber-500 mb-4">04. Material Take-Offs</h3>
+    <p class="text-gray-300 mb-4">
+      Our team of detailers can handle projects of any size and complexity. We specialize in large, complex steel structures like stadiums, bridges, and hospitals.
+    </p>
+    <div class="overflow-hidden rounded-md">
+      <img src="img/mat.png" alt="Material Take-Offs" class="rounded-md shadow-md w-full h-auto object-cover">
+    </div>
+  </div>
+
+  <!-- Service 5 -->
+  <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:transform hover:scale-105 hover:bg-gray-700 hover-zoom hover-color transition-all duration-300 ease-in-out animate-fade-in-up w-full sm:w-1/2 md:w-1/3">
+    <h3 class="text-xl font-bold text-amber-500 mb-4">05. Estimation</h3>
+    <p class="text-gray-300 mb-4">
+      We leverage advanced software and highly trained professionals to deliver cost estimating and takeoffs with unmatched speed and precision, setting a new standard in the industry.
+    </p>
+    <div class="overflow-hidden rounded-md">
+      <img src="img/estimation.jpg" alt="Estimation" class="rounded-md shadow-md w-full h-auto object-cover">
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</section>
+
+
+  <!-- Platform Section -->
+  <section id="platform" class="py-12 bg-[#335B83]">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-amber-500 mb-8">PLATFORM</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 justify-center items-center">
+        <!-- Logo 1 -->
+        <div class="fade-in">
+          <img src="img/sds.png"SDS2 by Allplan" class="mx-auto h-16 logo-hover">
+        </div>
+        <!-- Logo 2 -->
+        <div class="fade-in">
+          <img src="img/tekla.png" alt="Tekla Structures" class="mx-auto h-16 logo-hover">
+        </div>
+        <!-- Logo 3 -->
+        <div class="fade-in">
+          <img src="img/bb.png" alt="Bluebeam" class="mx-auto h-16 logo-hover">
+        </div>
+        <!-- Logo 4 -->
+        <div class="fade-in">
+          <img src="img/aa.png" alt="Autodesk AutoCAD" class="mx-auto h-16 logo-hover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Call to Action Section -->
+  <section class="relative py-16 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 text-white">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img src="https://images.pexels.com/photos/1629184/pexels-photo-1629184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Background Building" class="w-full h-full object-cover opacity-40">
+    </div>
+    <!-- Content -->
+    <div class="relative container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+        We Provide the Best Service in Industry
+      </h2>
+      <p class="text-lg md:text-xl text-gray-300 mb-8">
+        Get in touch with us to experience top-quality steel detailing solutions for your projects.
+      </p>
+      <a
+        href="contact.html"
+        class="inline-block bg-orange-500 text-white text-lg font-medium px-8 py-4 rounded-lg shadow-lg hover-glow"
+      >
+        Contact Us Today <i class="bi bi-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+      <div class="container mx-auto px-6">
+        <!-- Footer Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left animate-fade-in">
+          <!-- Company Info -->
+          <div class="text-center">
+            <img 
+            src="img/logo.png" 
+            alt="SV Steel Detailing Logo" 
+            style="height: 100px; max-height: 100%; object-fit: contain; margin: 0 auto 12px; transition: transform 0.3s;" 
+            onmouseover="this.style.transform='scale(1.1)'" 
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <!-- <h5 class="text-xl font-bold text-yellow-500 mb-3">SVS Detailing Services</h5> -->
+            <p class="leading-relaxed">
+              Professional steel detailing services delivering accurate, efficient, and BIM-compliant solutions for modern construction projects.
+            </p>
+          </div>
+    
+          <!-- Quick Links -->
+          <div>
+            <h5 class="text-xl font-bold text-yellow-500 mb-3">Quick Links</h5>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
+              <li><a href="about.html" class="hover:text-yellow-400 transition-colors">About</a></li>
+              <li><a href="services.html" class="hover:text-yellow-400 transition-colors">Services</a></li>
+              <li><a href="Portfolio.html" class="hover:text-yellow-400 transition-colors">Portfolio</a></li>            
+              <li><a href="project.html" class="hover:text-yellow-400 transition-colors">Projects</a></li>
+              <li><a href="contact.html" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+            </ul>
+          </div>
+    
+      <!-- Connect With Us -->
+      <div>
+        <h5 class="text-xl font-bold text-yellow-500 mb-3">Connect With Us</h5>
+        <div class="space-y-4">
+          <div class="flex items-center justify-center md:justify-start hover-bounce">
+            <i class="bi bi-telephone-fill text-amber-400 text-2xl mr-4"></i>
+            <a href="tel:+12523709157" target="_blank" class="hover:text-orange-400 transition-colors">
+              Call: +1 2523709157
+            </a>
+          </div>
+          <div class="flex items-center justify-center md:justify-start hover-bounce">
+            <i class="bi bi-whatsapp text-green-500 text-2xl mr-3"></i>
+            <a href="https://wa.me/+918500556461?text=Hello!" target="_blank" class="hover:text-yellow-400 transition-colors">
+              WhatsApp: +91 8500556461
+            </a>
+          </div>
+          <div class="flex items-center justify-center md:justify-start hover-bounce">
+            <i class="bi bi-envelope-fill text-yellow-500 text-2xl mr-3"></i>
+            <a href="mailto:svsteeldetailing@gmail.com" class="hover:text-yellow-400 transition-colors">
+              svsteeldetailing@gmail.com
+            </a>
+          </div>
+          <div class="flex items-center justify-center md:justify-start hover-bounce">
+            <i class="bi bi-envelope-fill text-yellow-500 text-2xl mr-3"></i>
+            <a href="mailto:janetsvsds@gmail.com" class="hover:text-yellow-400 transition-colors">
+              janetsvsds@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+        </div>
+    
+        <!-- Divider -->
+        <hr class="my-6 border-gray-700">
+    
+        <!-- Copyright -->
+        <div class="text-center">
+          <p class="text-sm">&copy; <span id="currentYear"></span> SVS Detailing Services. All rights reserved.</p>
+          <div class="mt-4 flex items-center justify-center space-x-2">
+            <p class="text-sm">Designed and Developed by</p>
+            <a href="https://github.com/kushwi15" target="_blank" class="flex items-center text-500 hover:text-yellow-400 transition">
+              <img src="img/kushwi-logo.png" alt="Kushwi Logo" class="h-6 mr-2 rounded-full">
+              Kushwi
+            </a>
+          <!-- </div> -->
+        </div>
+      </div>
+    </footer>
+    
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

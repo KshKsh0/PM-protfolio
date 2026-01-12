@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Activities & Video | Ahmad Al-Hmouz</title>
+  <meta name="description" content="Student portfolio for Project Management IT (Fall 2025) — Ahmad Al-Hmouz." />
+  <link rel="icon" href="img/icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .glass { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body class="min-h-screen text-white noise">
+
+<div id="pageTransition" class="page-transition" aria-hidden="true"></div>
+
+
+<!-- Animated background blobs -->
+<div class="pointer-events-none fixed inset-0 overflow-hidden">
+  <div class="blob violet"></div>
+  <div class="blob cyan"></div>
+  <div class="blob blue"></div>
+</div>
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/80 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="img/icon.png" alt="Portfolio icon" class="h-9 w-9 rounded-xl" />
+      <div class="leading-tight">
+        <div class="text-base font-semibold text-white">Ahmad Al-Hmouz</div>
+        <div class="text-xs text-slate-300">AI • University of Jordan</div>
+      </div>
+    </a>
+
+    <button id="menuBtn" class="md:hidden rounded-xl border border-white/10 px-3 py-2 text-slate-200 hover:bg-white/5" aria-label="Open menu">
+      <i class="bi bi-list text-xl"></i>
+    </button>
+
+    <div class="hidden items-center gap-6 text-sm font-medium text-slate-200 md:flex">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="assignments.html">Assignments</a>
+      <a class="navlink" href="activities.html">Activities & Video</a>
+      <a class="navlink" href="skills.html">Skills</a>
+      <a class="navlink" href="reflection.html">Reflection</a>
+      <a class="navlink" href="favorites.html">Favorite Websites</a>
+      <a class="navlink" href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-900 md:hidden">
+    <div class="mx-auto grid max-w-6xl gap-1 px-4 py-3 text-sm font-medium text-slate-200">
+      <a class="navlink navlink-mobile" href="index.html">Home</a>
+      <a class="navlink navlink-mobile" href="assignments.html">Assignments</a>
+      <a class="navlink navlink-mobile" href="activities.html">Activities & Video</a>
+      <a class="navlink navlink-mobile" href="skills.html">Skills</a>
+      <a class="navlink navlink-mobile" href="reflection.html">Reflection</a>
+      <a class="navlink navlink-mobile" href="favorites.html">Favorite Websites</a>
+      <a class="navlink navlink-mobile" href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="mx-auto max-w-6xl px-4 py-10 page-main">
+  <header class="mb-8">
+    <h1 class="text-2xl font-bold md:text-3xl">Activities & Intro Video</h1>
+    <p class="muted mt-2 text-sm">Extracurricular activities, volunteering, conferences, hobbies, and an introductory video section.</p>
+  </header>
+
+  <section class="grid gap-6 md:grid-cols-2">
+    <div class="glass rounded-2xl p-6">
+      <div class="flex items-center gap-3">
+        <i class="bi bi-heart-pulse text-xl text-slate-300"></i>
+        <h2 class="text-lg font-semibold">Volunteering</h2>
+      </div>
+      <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-200">
+        <li>Active member of the IEEE Student Branch – University of Jordan</li>
+          <li>Participated in organizing technical and academic activities</li>
+           <li>Gained experience in teamwork, communication, and event organization</li>
+
+      </ul>
+    </div>
+
+    <div class="glass rounded-2xl p-6">
+      <div class="flex items-center gap-3">
+        <i class="bi bi-people-fill text-xl text-slate-300"></i>
+        <h2 class="text-lg font-semibold">Student Activities</h2>
+      </div>
+      <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-200">
+        <li>Build with AI Hackathon 2025 — 7th Place</li>
+        <li>Ieee competations</li>
+      </ul>
+    </div>
+
+    <div class="glass rounded-2xl p-6">
+      <div class="flex items-center gap-3">
+        <i class="bi bi-trophy text-xl text-slate-300"></i>
+        <h2 class="text-lg font-semibold">Conferences / Competitions</h2>
+      </div>
+      <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-200">
+        <li>Build with AI Hackathon 2025</li>
+      </ul>
+    </div>
+
+    <div class="glass rounded-2xl p-6">
+      <div class="flex items-center gap-3">
+        <i class="bi bi-controller text-xl text-slate-300"></i>
+        <h2 class="text-lg font-semibold">Hobbies</h2>
+      </div>
+      <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-200">
+        <li>Sports: Football and gym training</li>
+        <li>Video Games: Competitive and strategy-based games</li>
+        <li>Programming: Building projects and learning new technologies</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="mt-6 glass rounded-2xl p-6">
+    <div class="flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <i class="bi bi-camera-video text-xl text-slate-300"></i>
+        <h2 class="text-lg font-semibold">Introductory Video</h2>
+      </div>
+      <span class="muted text-xs">File: video/intro.mp4</span>
+    </div>
+
+    <div class="mt-5 overflow-hidden rounded-2xl border border-white/10 bg-black/40">
+      <div class="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-black">
+  <iframe
+    class="h-full w-full"
+    src="https://www.youtube-nocookie.com/embed/PEK0yMa_BLA"
+    title="Introduction Video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+
+    </div>
+  </section>
+</main>
+
+
+<footer class="border-t border-white/10 py-10">
+  <div class="mx-auto max-w-6xl px-4 text-sm text-slate-400">
+    <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+      <div>© <span id="year"></span> Ahmad Al-Hmouz — Portfolio</div>
+      <div class="text-slate-500">Fall 2025 • Project Management IT</div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+<script src="assets/app.js"></script>
+
+</body>
+</html>

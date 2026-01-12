@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Ahmad Al-Hmouz</title>
+  <meta name="description" content="Student portfolio for Project Management IT (Fall 2025) — Ahmad Al-Hmouz." />
+  <link rel="icon" href="img/icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .glass { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body class="min-h-screen text-white noise">
+
+<div id="pageTransition" class="page-transition" aria-hidden="true"></div>
+
+
+<!-- Animated background blobs -->
+<div class="pointer-events-none fixed inset-0 overflow-hidden">
+  <div class="blob violet"></div>
+  <div class="blob cyan"></div>
+  <div class="blob blue"></div>
+</div>
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/80 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="img/icon.png" alt="Portfolio icon" class="h-9 w-9 rounded-xl" />
+      <div class="leading-tight">
+        <div class="text-base font-semibold text-white">Ahmad Al-Hmouz</div>
+        <div class="text-xs text-slate-300">AI • University of Jordan</div>
+      </div>
+    </a>
+
+    <button id="menuBtn" class="md:hidden rounded-xl border border-white/10 px-3 py-2 text-slate-200 hover:bg-white/5" aria-label="Open menu">
+      <i class="bi bi-list text-xl"></i>
+    </button>
+
+    <div class="hidden items-center gap-6 text-sm font-medium text-slate-200 md:flex">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="assignments.html">Assignments</a>
+      <a class="navlink" href="activities.html">Activities & Video</a>
+      <a class="navlink" href="skills.html">Skills</a>
+      <a class="navlink" href="reflection.html">Reflection</a>
+      <a class="navlink" href="favorites.html">Favorite Websites</a>
+      <a class="navlink" href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-900 md:hidden">
+    <div class="mx-auto grid max-w-6xl gap-1 px-4 py-3 text-sm font-medium text-slate-200">
+      <a class="navlink navlink-mobile" href="index.html">Home</a>
+      <a class="navlink navlink-mobile" href="assignments.html">Assignments</a>
+      <a class="navlink navlink-mobile" href="activities.html">Activities & Video</a>
+      <a class="navlink navlink-mobile" href="skills.html">Skills</a>
+      <a class="navlink navlink-mobile" href="reflection.html">Reflection</a>
+      <a class="navlink navlink-mobile" href="favorites.html">Favorite Websites</a>
+      <a class="navlink navlink-mobile" href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="mx-auto max-w-6xl px-4 py-10 page-main">
+  <header class="mb-8">
+    <h1 class="text-2xl font-bold md:text-3xl">Contact</h1>
+    <p class="muted mt-2 text-sm">Ways to reach me.</p>
+  </header>
+
+  <section class="grid gap-6 md:grid-cols-2">
+    <div class="glass rounded-2xl p-6">
+      <h2 class="text-lg font-semibold">Contact Cards</h2>
+      <p class="muted mt-2 text-sm">Scroll on the icons for a fun effect.</p>
+
+      <div class="mt-4 grid gap-4">
+        <a class="fancy-card p-5" href="mailto:ahmedalhmouz123@outlook.com">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <div class="font-semibold">Email</div>
+              <div class="muted text-sm">ahmedalhmouz123@outlook.com</div>
+            </div>
+            <div class="scroll-zoom" title="Scroll on me"><i class="bi bi-envelope"></i></div>
+          </div>
+        </a>
+
+        <a class="fancy-card p-5" href="tel:+962790575332">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <div class="font-semibold">Phone</div>
+              <div class="muted text-sm">0790575332</div>
+            </div>
+            <div class="scroll-zoom" title="Scroll on me"><i class="bi bi-telephone"></i></div>
+          </div>
+        </a>
+
+        <a class="fancy-card p-5" href="https://www.linkedin.com/in/ahmed-al-hmouz%E2%80%AD571a92304" target="_blank" rel="noreferrer">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <div class="font-semibold">LinkedIn</div>
+              <div class="muted text-sm">Open profile</div>
+            </div>
+            <div class="scroll-zoom" title="Scroll on me"><i class="bi bi-linkedin"></i></div>
+          </div>
+        </a>
+
+        <a class="fancy-card p-5" href="https://github.com/KshKsh0" target="_blank" rel="noreferrer">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <div class="font-semibold">GitHub</div>
+              <div class="muted text-sm">github.com/KshKsh0</div>
+            </div>
+            <div class="scroll-zoom" title="Scroll on me"><i class="bi bi-github"></i></div>
+          </div>
+        </a>
+
+        <div class="glass rounded-2xl p-5">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <div class="font-semibold">Location</div>
+              <div class="muted text-sm">Amman, Jordan</div>
+            </div>
+            <div class="scroll-zoom" title="Scroll on me"><i class="bi bi-geo-alt"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass rounded-2xl p-6">
+      <h2 class="text-lg font-semibold">Quick Links</h2>
+      <div class="mt-4 grid gap-3">
+        <a class="fancy-card p-5" href="assets/Ahmad_Al-Hmouz_CV.pdf" target="_blank" rel="noreferrer">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <div class="font-semibold">CV (PDF)</div>
+              <div class="muted text-sm">Download / view</div>
+            </div>
+            <div class="scroll-zoom" title="Scroll on me"><i class="bi bi-file-earmark-person"></i></div>
+          </div>
+        </a>
+        <a class="fancy-card p-5" href="reflection.html">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <div class="font-semibold">Reflection</div>
+              <div class="muted text-sm">Lecture notes</div>
+            </div>
+            <div class="scroll-zoom" title="Scroll on me"><i class="bi bi-journal-text"></i></div>
+          </div>
+        </a>
+        <a class="fancy-card p-5" href="favorites.html">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <div class="font-semibold">Favorite Websites</div>
+              <div class="muted text-sm">Academic links</div>
+            </div>
+            <div class="scroll-zoom" title="Scroll on me"><i class="bi bi-globe"></i></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="border-t border-white/10 py-10">
+  <div class="mx-auto max-w-6xl px-4 text-sm text-slate-400">
+    <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+      <div>© <span id="year"></span> Ahmad Al-Hmouz — Portfolio</div>
+      <div class="text-slate-500">Fall 2025 • Project Management IT</div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+<script src="assets/app.js"></script>
+
+</body>
+</html>

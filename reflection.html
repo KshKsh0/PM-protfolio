@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflection | Ahmad Al-Hmouz</title>
+  <meta name="description" content="Student portfolio for Project Management IT (Fall 2025) — Ahmad Al-Hmouz." />
+  <link rel="icon" href="img/icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .glass { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body class="min-h-screen text-white noise">
+
+<div id="pageTransition" class="page-transition" aria-hidden="true"></div>
+
+
+<!-- Animated background blobs -->
+<div class="pointer-events-none fixed inset-0 overflow-hidden">
+  <div class="blob violet"></div>
+  <div class="blob cyan"></div>
+  <div class="blob blue"></div>
+</div>
+
+<!-- Navbar -->
+<nav class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/80 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="img/icon.png" alt="Portfolio icon" class="h-9 w-9 rounded-xl" />
+      <div class="leading-tight">
+        <div class="text-base font-semibold text-white">Ahmad Al-Hmouz</div>
+        <div class="text-xs text-slate-300">AI • University of Jordan</div>
+      </div>
+    </a>
+
+    <button id="menuBtn" class="md:hidden rounded-xl border border-white/10 px-3 py-2 text-slate-200 hover:bg-white/5" aria-label="Open menu">
+      <i class="bi bi-list text-xl"></i>
+    </button>
+
+    <div class="hidden items-center gap-6 text-sm font-medium text-slate-200 md:flex">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="assignments.html">Assignments</a>
+      <a class="navlink" href="activities.html">Activities & Video</a>
+      <a class="navlink" href="skills.html">Skills</a>
+      <a class="navlink" href="reflection.html">Reflection</a>
+      <a class="navlink" href="favorites.html">Favorite Websites</a>
+      <a class="navlink" href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-900 md:hidden">
+    <div class="mx-auto grid max-w-6xl gap-1 px-4 py-3 text-sm font-medium text-slate-200">
+      <a class="navlink navlink-mobile" href="index.html">Home</a>
+      <a class="navlink navlink-mobile" href="assignments.html">Assignments</a>
+      <a class="navlink navlink-mobile" href="activities.html">Activities & Video</a>
+      <a class="navlink navlink-mobile" href="skills.html">Skills</a>
+      <a class="navlink navlink-mobile" href="reflection.html">Reflection</a>
+      <a class="navlink navlink-mobile" href="favorites.html">Favorite Websites</a>
+      <a class="navlink navlink-mobile" href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="mx-auto max-w-6xl px-4 py-10 page-main">
+  <header class="mb-8">
+    <h1 class="text-2xl font-bold md:text-3xl">Reflection</h1>
+    <p class="muted mt-2 text-sm">Lecture reflections loaded from JSON.</p>
+  </header>
+
+  <section class="glass rounded-2xl p-6">
+    <div class="flex items-center justify-between">
+      <h2 class="text-lg font-semibold">Lecture Reflections</h2>
+      
+    </div>
+
+    <div id="reflectionList" class="mt-5 space-y-4"></div>
+  </section>
+</main>
+
+<script>
+  function esc(s){return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+  async function loadReflections(){
+    const list = document.getElementById('reflectionList');
+    try{
+      const res = await fetch('assets/data/reflections.json');
+      const data = await res.json();
+
+            const entries = (data.reflections || []).slice().sort((a,b)=> (a.date||'').localeCompare(b.date||''));
+      list.innerHTML = '';
+
+      entries.forEach((lec) => {
+        const reflectionText = Array.isArray(lec.reflection) ? lec.reflection.join('\n\n') : (lec.reflection || '');
+        const topicsHtml = Array.isArray(lec.topics) && lec.topics.length
+          ? `<div class="mt-3 flex flex-wrap gap-2">${lec.topics.map(t=>`<span class="chip">${esc(t)}</span>`).join('')}</div>`
+          : '';
+
+        const glass = document.createElement('div');
+        glass.className = 'glass rounded-2xl p-5 reveal';
+        glass.innerHTML = `
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="text-sm text-slate-300">${esc(lec.date || '')} • Lecture ${esc(lec.lectureNumber ?? '')}</div>
+              <div class="mt-1 text-base font-semibold">${esc(lec.title || '')}</div>
+            </div>
+            <i class="bi bi-journal-text text-xl text-slate-300"></i>
+          </div>
+          ${topicsHtml}
+          <div class="mt-4 whitespace-pre-line rounded-xl bg-white/5 p-4 text-sm text-slate-100">
+            ${esc(reflectionText)}
+          </div>
+        `;
+        list.appendChild(glass);
+        if (window.__revealObserve) window.__revealObserve(glass);
+      });
+
+      if(entries.length === 0){
+        list.innerHTML = '<div class="muted text-sm">No lecture reflections found.</div>';
+      }
+    } catch(e){
+      list.innerHTML = '<div class="muted text-sm">Failed to load reflections JSON.</div>';
+    }
+  }
+  loadReflections();
+</script>
+
+
+<footer class="border-t border-white/10 py-10">
+  <div class="mx-auto max-w-6xl px-4 text-sm text-slate-400">
+    <div class="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+      <div>© <span id="year"></span> Ahmad Al-Hmouz — Portfolio</div>
+      <div class="text-slate-500">Fall 2025 • Project Management IT</div>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+<script src="assets/app.js"></script>
+
+</body>
+</html>
